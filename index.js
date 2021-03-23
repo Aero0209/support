@@ -100,7 +100,7 @@ const {
  				.setFooter(` Made by Vato`, 'https://cdn.discordapp.com/attachments/719965641003499630/785159414503571486/viceblueguetteur.png')
 			 	.setDescription(`<:821087553243316244:823981341778903051> <@${message.author.id}> just made a new ticket.\n<:821087553243316244:823981341778903051> To talk with him just send a message here.\n<:821087553243316244:823981341778903051> Do \`.close\` to close the ticket\n\n <:821087553243316244:823981341778903051> His message: ` +  message.content );
           	c.send(`<@${message.author.id}>`)
-          	c.send(`<@&820684977707417651>`)
+          	c.send(`<@820684977707417651>`)
             c.send({
                 embed: embed
             });
