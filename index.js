@@ -64,8 +64,8 @@ const {
                 var pq = client.users.get(ret)
                 const embed = new RichEmbed()
         			.setColor('ORANGE')
-        			.setTitle(`🎫 Fermeture de votre ticket`)
-                    .setDescription("you ticket is closed by " + message.author + " don't respond after this")
+        			.setTitle(`🎫 Ticket Closed`)
+                    .setDescription("Your ticket is closed by " + message.author + " don't respond after this")
                     .setTimestamp();
                 pq.send({
                     embed: embed
@@ -80,7 +80,7 @@ const {
         server.createChannel(`ticket-${message.author.id}`, "text").then(c => {
         	            c.setParent('823977127455883274')
             for (i = 0; i < config.ModeratorRoles.length; i++) {
-                var role1 = client.guilds.get(config.serverID).roles.find("name", config.ModeratorRoles[i]);
+                var role1 = client.guilds.get(config.serverID).roles.find("id", "820684977707417651");
                 c.overwritePermissions(role1, {
                     SEND_MESSAGES: true,
                     READ_MESSAGES: true,
@@ -98,7 +98,7 @@ const {
                 .setColor('GREEN')
  				.setTitle(`🎫 New Ticket`)
  				.setFooter(`Vice Blue | Crée par Vato`, 'https://cdn.discordapp.com/attachments/719965641003499630/785159414503571486/viceblueguetteur.png')
-			 	.setDescription(`⚫ <@${message.author.id}> just made a new ticket.\n⚫ To talk with him just send a message here.\n⚫ Do \`.close\` to close the ticket\n\n ⚫ His message: ` +  message.content );
+			 	.setDescription(`<:821087553243316244:823981341778903051> <@${message.author.id}> just made a new ticket.\n<:821087553243316244:823981341778903051> To talk with him just send a message here.\n<:821087553243316244:823981341778903051> Do \`.close\` to close the ticket\n\n <:821087553243316244:823981341778903051> His message: ` +  message.content );
           	c.send(`<@${message.author.id}>`)
           	c.send(`<@&768890998905503744>`)
             c.send({
