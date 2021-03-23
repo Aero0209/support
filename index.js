@@ -9,12 +9,12 @@ const {
   
   client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
-    client.user.setActivity(`Une question ? MP MOI`);
+    client.user.setActivity(`Want to purshase ? | DM ME`);
   });
   
   client.on("guildCreate", guild => {
     console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-    client.user.setActivity(`Une question ? MP MOI`);
+    client.user.setActivity(`Want to purshase ? | DM ME`);
   });
   
   client.on("guildDelete", guild => {
@@ -34,7 +34,7 @@ const {
   
     const embed = new RichEmbed()
         .setColor('ORANGE')
-        .addField(`Nouveau message de ${message.author.username}`, message.content + " " + pp)
+        .addField(`New message from ${message.author.username}`, message.content + " " + pp)
         .setTimestamp();
     c.send({
         embed: embed
@@ -52,7 +52,7 @@ const {
             var pq = client.users.get(ret)
             const embed = new RichEmbed()
                 .setColor('ORANGE')
-                .addField(`Nouveau message de ${message.author.username}`, message.content)
+                .addField(`New message from ${message.author.username}`, message.content)
                 .setTimestamp();
             pq.send({
                 embed: embed
@@ -65,7 +65,7 @@ const {
                 const embed = new RichEmbed()
         			.setColor('ORANGE')
         			.setTitle(`🎫 Fermeture de votre ticket`)
-                    .setDescription("Votre ticket a été fermé par " + message.author + " inutile de répondre à ce message")
+                    .setDescription("you ticket is closed by " + message.author + " don't respond after this")
                     .setTimestamp();
                 pq.send({
                     embed: embed
@@ -96,9 +96,9 @@ const {
             message.channel.send(`:white_check_mark: Succesfull \n\n:flag_fr:  | Votre message a été transmit au staff.\n\n:flag_us:  | Your message has been send to the support team.`);
             const embed = new RichEmbed()
                 .setColor('GREEN')
- 				.setTitle(`🎫 Nouveau ticket`)
+ 				.setTitle(`🎫 New Ticket`)
  				.setFooter(`Vice Blue | Crée par Vato`, 'https://cdn.discordapp.com/attachments/719965641003499630/785159414503571486/viceblueguetteur.png')
-			 	.setDescription(`<a:776086479340306453:779635224786894868> <@${message.author.id}> vient de crée un nouveau ticket.\n<a:776086479340306453:779635224786894868>Pour le répondre écrivez le juste dans ce channel ca l'envoiera directement en mp.\n<a:776086479340306453:779635224786894868> Faire \`.close\` pour fermer votre ticket\n\n <a:soon:759502536318648380> problèmes: ` +  message.content );
+			 	.setDescription(`⚫ <@${message.author.id}> just made a new ticket.\n⚫ To talk with him just send a message here.\n⚫ Do \`.close\` to close the ticket\n\n ⚫ His message: ` +  message.content );
           	c.send(`<@${message.author.id}>`)
           	c.send(`<@&768890998905503744>`)
             c.send({
