@@ -78,7 +78,7 @@ const {
     if (message.channel.type === "dm") {
         if (server.channels.exists("name", "ticket-" + message.author.id)) return SendMessageTicket(message);
         server.createChannel(`ticket-${message.author.id}`, "text").then(c => {
-        	            c.setParent('768891032754061323')
+        	            c.setParent('823977127455883274')
             for (i = 0; i < config.ModeratorRoles.length; i++) {
                 var role1 = client.guilds.get(config.serverID).roles.find("name", config.ModeratorRoles[i]);
                 c.overwritePermissions(role1, {
@@ -93,7 +93,7 @@ const {
                 READ_MESSAGES: false
             });
 
-            message.channel.send(`:white_check_mark: Votre demande a été transmise au staff.`);
+            message.channel.send(`:white_check_mark: Ticket\n\n⚫ | Votre message a été transmit au staff.\n\n⚫ | Your message has been send to the support team.`);
             const embed = new RichEmbed()
                 .setColor('GREEN')
  				.setTitle(`🎫 Nouveau ticket`)
