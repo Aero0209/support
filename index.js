@@ -93,7 +93,7 @@ const {
                 READ_MESSAGES: false
             });
 
-            message.channel.send(`:white_check_mark: Ticket\n\n⚫ | Votre message a été transmit au staff.\n\n⚫ | Your message has been send to the support team.`);
+            message.channel.send(`:white_check_mark: Succesfull \n\n:flag_fr:  | Votre message a été transmit au staff.\n\n:flag_us:  | Your message has been send to the support team.`);
             const embed = new RichEmbed()
                 .setColor('GREEN')
  				.setTitle(`🎫 Nouveau ticket`)
